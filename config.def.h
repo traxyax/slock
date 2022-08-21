@@ -12,6 +12,14 @@ static const char *colorname[NUMCOLS] = {
 /* treat a cleared input like a wrong password (color) */
 static const int failonclear = 1;
 
+
+/* number of failed password attempts until failcommand is executed.
+   Set to 0 to disable */
+static const int failcount = 0;
+
+/* command to be executed after [failcount] failed password attempts */
+static const char *failcommand = "shutdown";
+
 static const int logosize = 75;
 static const int logow = 12; /* Grid width and height for right center alignment*/
 static const int logoh = 6;
